@@ -1,4 +1,4 @@
-require 'Bundler'
+require 'bundler'
 Bundler.require()
 
 #http://localhost
@@ -7,6 +7,7 @@ get '/' do
 end
 
 #http://localhost/api/awesome/
-get 'api/awesome' do
-  #Do something else
+get '/api/awesome' do
+  {:cars => ['honda', 'potiac', 'chevy', 'bmw', 'ford'],
+  :planes => ['cessna', 'piper', 'f-15', 'saab', 'mustang']}.to_json
 end
